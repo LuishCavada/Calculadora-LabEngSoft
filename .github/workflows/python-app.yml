@@ -1,3 +1,13 @@
+name: Python package
+
+on:
+  push:
+    branches:
+      - '*'  # Ou qualquer outro branch que você deseje
+  pull_request:
+    branches:
+      - main  # Ou qualquer outro branch
+
 jobs:
   test:
     runs-on: ubuntu-latest
