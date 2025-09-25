@@ -1,4 +1,6 @@
-name: Python package
+name: CI Calculator
+
+run-name: $github.actor commited on the repo
 
 on:
   push:
