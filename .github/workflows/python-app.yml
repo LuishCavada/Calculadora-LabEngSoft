@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.10]  # Verifique versões mais recentes como 3.11 também
+        python-version: [3.8, 3.9, 3.14]  # Verifique versões mais recentes como 3.11 também
 
     steps:
     - name: Checkout code
