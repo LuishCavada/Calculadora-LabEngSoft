@@ -39,3 +39,5 @@ def test_decimal_operations():
     assert Calculator.mul(1.5, 2.5) == 3.75
     assert Calculator.div(7.5, 2.5) == 3
     assert Calculator.exp(2.5, 2) == 6.25
+
+# test
