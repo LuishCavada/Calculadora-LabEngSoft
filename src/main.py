@@ -31,21 +31,21 @@ def Calculate(a, b, op):
 
     return result
 
+if __name__ == "__main__":
+    a = input("Insira o primeiro operando: ")
 
-a = input("Insira o primeiro operando: ")
+    op = input("Insira a operação (Escolha entre +, -, /, * e ^): ")
 
-op = input("Insira a operação (Escolha entre +, -, /, * e ^): ")
-
-b = input("Insira o segundo operando: ")
+    b = input("Insira o segundo operando: ")
 
 
 
-result = Calculate(a, b, op)
+    result = Calculate(a, b, op)
 
-if result == None:
-    print("Algo deu errado, o valor é None")
-    exit()
+    if result == None:
+        print("Algo deu errado, o valor é None")
+        exit()
 
-else:
-    print("O resultado foi " + str(result))
-    exit()
+    else:
+        print("O resultado foi " + str(result))
+        exit()

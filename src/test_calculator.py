@@ -1,5 +1,6 @@
 import pytest
 from calculator import Calculator
+from main import Calculate
 
 def test_sum():
     assert Calculator.sum(2, 3) == 5
@@ -40,4 +41,30 @@ def test_decimal_operations():
     assert Calculator.div(7.5, 2.5) == 3
     assert Calculator.exp(2.5, 2) == 6.25
 
-# test
+def test_Calculate():
+    result = Calculate(5, 3, '+')
+    assert result == 8, f"Esperado 8, mas obteve {result}"
+
+    result = Calculate(10, 3, '-')
+    assert result == 7, f"Esperado 7, mas obteve {result}"
+
+    result = Calculate(4, 2, '*')
+    assert result == 8, f"Esperado 8, mas obteve {result}"
+
+    result = Calculate(6, 2, '/')
+    assert result == 3, f"Esperado 3, mas obteve {result}"
+
+    result = Calculate(2, 3, '^')
+    assert result == 8, f"Esperado 8, mas obteve {result}"
+
+    result = Calculate(5, 0, '/')
+    assert result is None, f"Esperado None, mas obteve {result}"
+
+    result = Calculate(5, 3, '%')  # Operação % não válida
+    assert result is None, f"Esperado None, mas obteve {result}"
+
+    result = Calculate('abc', 3, '+')
+    assert result is None, f"Esperado None, mas obteve {result}"
+
+    result = Calculate(5, 'xyz', '+')
+    assert result is None, f"Esperado None, mas obteve {result}"
