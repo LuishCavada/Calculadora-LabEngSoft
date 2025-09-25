@@ -1,14 +1,10 @@
-name: Python package
-
-on: [push, pull_request]
-
 jobs:
   test:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.10]
+        python-version: [3.8, 3.9, 3.10]  # Verifique versões mais recentes como 3.11 também
 
     steps:
     - name: Checkout code
